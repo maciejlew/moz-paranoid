@@ -10,5 +10,10 @@
     "psr-4": {
       "MozParanoid\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MozParanoid\\Tests\\": "tests/"
+    }
   }
 }
