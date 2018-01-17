@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Parser;
+namespace MozParanoid\Infrastructure;
 
 use MozParanoid\Domain\UserPreference;
 
-class MozUserPreferencesParser
+class UserPreferencesParser
 {
 
     /**

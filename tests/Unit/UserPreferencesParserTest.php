@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace MozParanoid\Tests\Unit;
 
-use MozParanoid\Parser\MozUserPreferencesParser;
+use MozParanoid\Infrastructure\UserPreferencesParser;
 use MozParanoid\Tests\Asserts\UserPreferenceAssert;
 use PHPUnit\Framework\TestCase;
 
-class MozUserPreferencesParserTest extends TestCase
+class UserPreferencesParserTest extends TestCase
 {
 
-    /** @var MozUserPreferencesParser */
+    /** @var UserPreferencesParser */
     private $parser;
 
     /** @var UserPreferenceAssert */
@@ -22,7 +22,7 @@ class MozUserPreferencesParserTest extends TestCase
      */
     public function init()
     {
-        $this->parser = new MozUserPreferencesParser();
+        $this->parser = new UserPreferencesParser();
         $this->assert = new UserPreferenceAssert();
     }
 
