@@ -17,8 +17,16 @@ class MozUserPreferencesParser
     {
         $userPreferences = [];
 
-        if (preg_match_all('/user_pref\("([^"]+)",[ ]?"([^"]*)"\)/', $input, $matches, PREG_SET_ORDER)) {
-            $userPreferences = array_map([$this, 'createUserPreference'], $matches);
+        $patterns = [
+            '/user_pref\("([^"]+)",[ ]?"([^"]*)"\)/',
+            '/user_pref\("([^"]+)",[ ]?(true|false)\)/'
+        ];
+
+        foreach ($patterns as $pattern) {
+            if (preg_match_all($pattern, $input, $matches, PREG_SET_ORDER)) {
+                $patternPreferences = array_map([$this, 'createUserPreference'], $matches);
+                $userPreferences = array_merge($userPreferences, $patternPreferences);
+            }
         }
 
         return $userPreferences;

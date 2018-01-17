@@ -49,4 +49,16 @@ class MozUserPreferencesParserTest extends TestCase
         $this->assert->assert('pref2', 'value2', $userPreferences[1]);
     }
 
+    /**
+     * @test
+     */
+    public function itShouldFindBooleanValues()
+    {
+        $userPreferences = $this->parser->parse('user_pref("pref1", true);user_pref("pref2", false)');
+
+        $this->assertCount(2, $userPreferences);
+        $this->assert->assert('pref1', 'true', $userPreferences[0]);
+        $this->assert->assert('pref2', 'false', $userPreferences[1]);
+    }
+
 }
