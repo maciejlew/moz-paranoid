@@ -1,0 +1,9 @@
+<phpunit>
+
+    <testsuites>
+        <testsuite name="moz-paranoid test suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>
