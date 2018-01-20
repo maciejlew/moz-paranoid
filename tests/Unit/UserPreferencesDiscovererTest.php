@@ -6,7 +6,7 @@ namespace MozParanoid\Tests\Unit;
 
 use MozParanoid\Infrastructure\UserPreferencesDiscoverer;
 use MozParanoid\Tests\Fixtures\FileSystemFixture;
-use MozParanoid\Tests\Fixtures\UserPreferencesConfigFixture;
+use MozParanoid\Tests\Fixtures\ConfigFixture;
 use PHPUnit\Framework\TestCase;
 
 class UserPreferencesDiscovererTest extends TestCase
@@ -22,7 +22,7 @@ class UserPreferencesDiscovererTest extends TestCase
     {
         $fileSystemStream = FileSystemFixture::create('test_resources');
         $basePath = $fileSystemStream->url() . DIRECTORY_SEPARATOR . 'profilesPath';
-        $config = UserPreferencesConfigFixture::createWithBasePath($basePath);
+        $config = ConfigFixture::createBasePathConfig($basePath);
         $this->discoverer = new UserPreferencesDiscoverer($config);
     }
 

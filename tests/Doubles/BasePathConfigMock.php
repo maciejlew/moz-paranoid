@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace MozParanoid\Tests\Doubles;
 
-use MozParanoid\Config\UserPreferencesConfig;
+use MozParanoid\Config\BasePathConfig;
 
-class UserPreferencesBasePathConfigMock extends UserPreferencesConfig
+class BasePathConfigMock extends BasePathConfig
 {
 
     /** @var string */

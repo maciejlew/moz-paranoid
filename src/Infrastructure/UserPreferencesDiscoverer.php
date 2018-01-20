@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MozParanoid\Infrastructure;
 
-use MozParanoid\Config\UserPreferencesConfig;
+use MozParanoid\Config\BasePathConfig;
 use MozParanoid\Exceptions\NoBasePathConfiguredException;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -17,10 +17,10 @@ class UserPreferencesDiscoverer
     private $basePath;
 
     /**
-     * @param UserPreferencesConfig $config
+     * @param BasePathConfig $config
      * @throws NoBasePathConfiguredException
      */
-    public function __construct(UserPreferencesConfig $config)
+    public function __construct(BasePathConfig $config)
     {
         $this->basePath = $config->getBasePath();
     }

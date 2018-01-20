@@ -8,7 +8,7 @@ use MozParanoid\Exceptions\NoBasePathConfiguredException;
 use MozParanoid\Exceptions\NoConfigFileException;
 use Symfony\Component\Yaml\Yaml;
 
-class UserPreferencesConfig
+class BasePathConfig
 {
 
     private $config;
