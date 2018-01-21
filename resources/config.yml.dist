@@ -1,1 +1,54 @@
+# adjust and copy this file to resources/config.yml
 basePath: /home/user/.mozilla/firefox
+rules:
+  'browser.newtabpage.activity-stream.feeds.telemetry':
+    expectedValue: !!str false
+    absenceToleration: false
+  'browser.newtabpage.activity-stream.telemetry':
+    expectedValue: !!str false
+    absenceToleration: false
+  'browser.ping-centre.telemetry':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.archive.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.bhrPing.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.firstShutdownPing.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.newProfilePing.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.reportingpolicy.firstRun':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.shutdownPingSender.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.unified':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.updatePing.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'experiments.activeExperiment':
+    expectedValue: !!str false
+    absenceToleration: false
+  'experiments.enabled':
+    expectedValue: !!str false
+    absenceToleration: false
+  'experiments.supported':
+    expectedValue: !!str false
+    absenceToleration: false
+  'network.allow-experiments':
+    expectedValue: !!str false
+    absenceToleration: false
+  'toolkit.telemetry.server':
+    expectedValue:
+    absenceToleration: false
