@@ -4,4 +4,6 @@
 
 MOZ for paranoids.
 
-Inspired by: https://www.dobreprogramy.pl/Jak-skutecznie-wylaczyc-telemetrie-w-Firefoksie-Jedno-klikniecie-to-za-malo,News,85414.html
+Inspired by: [Jak skutecznie wyłączyć telemetrię w Firefoksie?][1]
+
+[1]: https://www.dobreprogramy.pl/Jak-skutecznie-wylaczyc-telemetrie-w-Firefoksie-Jedno-klikniecie-to-za-malo,News,85414.html
