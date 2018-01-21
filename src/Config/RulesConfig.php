@@ -22,7 +22,7 @@ class RulesConfig
         if (!is_readable($configFile)) {
             throw NoConfigFileException::create();
         }
-        $this->config = Yaml::parse($configFile);
+        $this->config = Yaml::parse(file_get_contents($configFile));
     }
 
     /**
