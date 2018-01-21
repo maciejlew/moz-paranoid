@@ -8,6 +8,14 @@ This project goal is to look for enabled telemetry settings. At first it search 
 
 Inspired by: [Jak skutecznie wyłączyć telemetrię w Firefoksie?][1]
 
+## Installation
+
+Run command:
+
+```
+composer create-project lionnet/moz-paranoid
+```
+
 ## Usage
 
 Copy **resources/config.yml.dist** file to **resources/config.yml** file.
