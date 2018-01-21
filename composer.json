@@ -1,5 +1,10 @@
 {
-  "name": "maciejlew/moz-paranoid",
+  "name": "lionnet/moz-paranoid",
+  "type": "project",
+  "description": "MOZ for paranoids",
+  "keywords": ["browsers", "telemetry"],
+  "homepage": "https://github.com/maciejlew/moz-paranoid",
+  "license": "MIT",
   "require": {
     "php": "^7.1",
     "symfony/yaml": "^4.0"
