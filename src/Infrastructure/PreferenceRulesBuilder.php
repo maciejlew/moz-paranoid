@@ -34,7 +34,7 @@ class PreferenceRulesBuilder
         foreach ($this->rawRules as $ruleName => $rawRule) {
             $rules[] = new PreferenceRule(
                 $ruleName,
-                $rawRule['expectedValue'],
+                (string)$rawRule['expectedValue'],
                 $rawRule['absenceToleration']
             );
         }
