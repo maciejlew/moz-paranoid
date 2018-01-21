@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace MozParanoid\Tests\Unit;
 
+use MozParanoid\Exceptions\InvalidRuleFormatException;
 use MozParanoid\Infrastructure\PreferenceRulesBuilder;
 use MozParanoid\Tests\Asserts\PreferenceRuleAssert;
 use MozParanoid\Tests\Fixtures\ConfigFixture;
@@ -81,6 +82,41 @@ class PreferenceRulesBuilderTest extends TestCase
             false,
             $rules[1]
         );
+    }
+
+    /**
+     * @test
+     * @dataProvider invalidRuleFormats
+     */
+    public function itShouldThrowInvalidRuleFormatException(array $invalidRawRules)
+    {
+        $config = ConfigFixture::createRulesConfig($invalidRawRules);
+        $rulesBuilder = new PreferenceRulesBuilder($config);
+
+        $this->expectException(InvalidRuleFormatException::class);
+
+        $rulesBuilder->build();
+    }
+
+    /**
+     * @return array
+     */
+    public function invalidRuleFormats(): array
+    {
+        return [
+            [
+                ['invalidRule'] // string
+            ],
+            [
+                ['invalidRule' => []] // empty array
+            ],
+            [
+                ['invalidRule' => ['expectedValue' => 'any']]  // missing absenceToleration
+            ],
+            [
+                ['invalidRule' => ['absenceToleration' => true]] // missing expectedValue
+            ],
+        ];
     }
 
 }

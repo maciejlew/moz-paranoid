@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace MozParanoid\Exceptions;
 
-use Exception;
-
-class NoBasePathConfiguredException extends Exception
+class NoBasePathConfiguredException extends ConfigurationException
 {
 
     /**

@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace MozParanoid\Exceptions;
 
-use Exception;
-
-class NoRulesConfiguredException extends Exception
+class NoRulesConfiguredException extends ConfigurationException
 {
 
     /**

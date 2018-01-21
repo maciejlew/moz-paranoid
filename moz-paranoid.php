@@ -5,10 +5,7 @@ declare(strict_types=1);
 use MozParanoid\Config\BasePathConfig;
 use MozParanoid\Config\RulesConfig;
 use MozParanoid\Domain\PreferenceRulesAnalyzer;
-use MozParanoid\Exceptions\InvalidBasePathException;
-use MozParanoid\Exceptions\NoBasePathConfiguredException;
-use MozParanoid\Exceptions\NoConfigFileException;
-use MozParanoid\Exceptions\NoRulesConfiguredException;
+use MozParanoid\Exceptions\ConfigurationException;
 use MozParanoid\Infrastructure\PreferenceRulesBuilder;
 use MozParanoid\Infrastructure\UserPreferencesDiscoverer;
 use MozParanoid\Infrastructure\UserPreferencesParser;
@@ -18,12 +15,10 @@ require_once './vendor/autoload.php';
 try {
     $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesConfig());
     $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig());
-
-} catch (NoConfigFileException|NoBasePathConfiguredException|NoRulesConfiguredException|InvalidBasePathException $exception) {
+    $preferenceRules = $preferenceRulesBuilder->build();
+} catch (ConfigurationException $exception) {
     die('Configuration step exception: ' . $exception->getMessage() . PHP_EOL);
 }
-
-$preferenceRules = $preferenceRulesBuilder->build();
 
 $userPreferenceFiles = $userPreferencesDiscoverer->discover();
 

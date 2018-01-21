@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace MozParanoid\Exceptions;
 
-use Exception;
-
-class InvalidBasePathException extends Exception
+class InvalidBasePathException extends ConfigurationException
 {
 
     /**
