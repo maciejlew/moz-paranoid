@@ -5,6 +5,7 @@ declare(strict_types=1);
 use MozParanoid\Config\BasePathConfig;
 use MozParanoid\Config\RulesConfig;
 use MozParanoid\Domain\PreferenceRulesAnalyzer;
+use MozParanoid\Exceptions\InvalidBasePathException;
 use MozParanoid\Exceptions\NoBasePathConfiguredException;
 use MozParanoid\Exceptions\NoConfigFileException;
 use MozParanoid\Exceptions\NoRulesConfiguredException;
@@ -18,7 +19,7 @@ try {
     $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesConfig());
     $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig());
 
-} catch (NoConfigFileException|NoBasePathConfiguredException|NoRulesConfiguredException $exception) {
+} catch (NoConfigFileException|NoBasePathConfiguredException|NoRulesConfiguredException|InvalidBasePathException $exception) {
     die('Configuration step exception: ' . $exception->getMessage() . PHP_EOL);
 }
 
