@@ -27,7 +27,7 @@ $preferenceRules = $preferenceRulesBuilder->build();
 $userPreferenceFiles = $userPreferencesDiscoverer->discover();
 
 if (empty($userPreferenceFiles)) {
-    die('Can not find ant preference file.');
+    die('Can not find any preferences file.');
 }
 
 $userPreferencesParser = new UserPreferencesParser();
