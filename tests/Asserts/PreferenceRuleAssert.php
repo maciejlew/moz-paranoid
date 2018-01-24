@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Tests\Asserts;
+namespace LionNet\MozParanoid\Tests\Asserts;
 
-use MozParanoid\Domain\PreferenceRule;
+use LionNet\MozParanoid\Domain\PreferenceRule;
 use PHPUnit\Framework\Assert;
 
 class PreferenceRuleAssert extends Assert

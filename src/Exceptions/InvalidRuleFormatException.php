@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Exceptions;
+namespace LionNet\MozParanoid\Exceptions;
+
+use LionNet\MozPrefs\Discoverer\Config\Exceptions\ConfigurationException;
 
 class InvalidRuleFormatException extends ConfigurationException
 {

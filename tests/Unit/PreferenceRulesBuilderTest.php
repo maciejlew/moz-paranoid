@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Tests\Unit;
+namespace LionNet\MozParanoid\Tests\Unit;
 
-use MozParanoid\Exceptions\InvalidRuleFormatException;
-use MozParanoid\Infrastructure\PreferenceRulesBuilder;
-use MozParanoid\Tests\Asserts\PreferenceRuleAssert;
-use MozParanoid\Tests\Fixtures\ConfigFixture;
+use LionNet\MozParanoid\Exceptions\InvalidRuleFormatException;
+use LionNet\MozParanoid\Infrastructure\PreferenceRulesBuilder;
+use LionNet\MozParanoid\Tests\Asserts\PreferenceRuleAssert;
+use LionNet\MozParanoid\Tests\Fixtures\ConfigFixture;
 use PHPUnit\Framework\TestCase;
 
 class PreferenceRulesBuilderTest extends TestCase

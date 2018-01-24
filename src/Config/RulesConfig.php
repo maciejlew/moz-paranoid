@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Config;
+namespace LionNet\MozParanoid\Config;
 
-use MozParanoid\Exceptions\NoConfigFileException;
-use MozParanoid\Exceptions\NoRulesConfiguredException;
+use LionNet\MozParanoid\Exceptions\NoRulesConfiguredException;
+use LionNet\MozPrefs\Discoverer\Config\Exceptions\NoConfigFileException;
 use Symfony\Component\Yaml\Yaml;
 
 class RulesConfig

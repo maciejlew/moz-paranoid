@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Infrastructure;
+namespace LionNet\MozParanoid\Infrastructure;
 
-use MozParanoid\Config\RulesConfig;
-use MozParanoid\Domain\PreferenceRule;
-use MozParanoid\Exceptions\InvalidRuleFormatException;
-use MozParanoid\Exceptions\NoRulesConfiguredException;
+use LionNet\MozParanoid\Config\RulesConfig;
+use LionNet\MozParanoid\Domain\PreferenceRule;
+use LionNet\MozParanoid\Exceptions\InvalidRuleFormatException;
+use LionNet\MozParanoid\Exceptions\NoRulesConfiguredException;
 
 class PreferenceRulesBuilder
 {

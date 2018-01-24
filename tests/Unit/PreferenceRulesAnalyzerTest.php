@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Tests\Unit;
+namespace LionNet\MozParanoid\Tests\Unit;
 
-use MozParanoid\Domain\PreferenceRule;
-use MozParanoid\Domain\PreferenceRulesAnalyzer;
-use MozParanoid\Domain\UserPreference;
+use LionNet\MozParanoid\Domain\PreferenceRule;
+use LionNet\MozParanoid\Domain\PreferenceRulesAnalyzer;
+use LionNet\MozPrefs\Parser\UserPreference;
 use PHPUnit\Framework\TestCase;
 
 class PreferenceRulesAnalyzerTest extends TestCase

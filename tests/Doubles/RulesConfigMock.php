@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Tests\Doubles;
+namespace LionNet\MozParanoid\Tests\Doubles;
 
-use MozParanoid\Config\RulesConfig;
+use LionNet\MozParanoid\Config\RulesConfig;
 
 class RulesConfigMock extends RulesConfig
 {

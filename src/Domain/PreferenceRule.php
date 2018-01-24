@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Domain;
+namespace LionNet\MozParanoid\Domain;
 
 class PreferenceRule
 {

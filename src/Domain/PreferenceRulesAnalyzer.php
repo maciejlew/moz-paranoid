@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MozParanoid\Domain;
+namespace LionNet\MozParanoid\Domain;
+
+use LionNet\MozPrefs\Parser\UserPreference;
 
 class PreferenceRulesAnalyzer
 {

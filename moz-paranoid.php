@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-use MozParanoid\Config\BasePathConfig;
-use MozParanoid\Config\RulesConfig;
-use MozParanoid\Domain\PreferenceRulesAnalyzer;
-use MozParanoid\Exceptions\ConfigurationException;
-use MozParanoid\Infrastructure\PreferenceRulesBuilder;
-use MozParanoid\Infrastructure\UserPreferencesDiscoverer;
-use MozParanoid\Infrastructure\UserPreferencesParser;
+use LionNet\MozParanoid\Config\RulesConfig;
+use LionNet\MozParanoid\Domain\PreferenceRulesAnalyzer;
+use LionNet\MozParanoid\Infrastructure\PreferenceRulesBuilder;
+use LionNet\MozPrefs\Discoverer\Config\BasePathConfig;
+use LionNet\MozPrefs\Discoverer\Config\Exceptions\ConfigurationException;
+use LionNet\MozPrefs\Discoverer\UserPreferencesDiscoverer;
+use LionNet\MozPrefs\Parser\UserPreferencesParser;
 
 require_once './vendor/autoload.php';
 
 try {
     $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesConfig());
-    $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig());
+    $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig('resources/config.yml'));
     $preferenceRules = $preferenceRulesBuilder->build();
 } catch (ConfigurationException $exception) {
     die('Configuration step exception: ' . $exception->getMessage() . PHP_EOL);
@@ -42,7 +42,3 @@ foreach ($userPreferenceFiles as $userPreferenceFile) {
         }
     }
 }
-
-
-
-
