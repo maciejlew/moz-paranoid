@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace LionNet\MozParanoid\Config;
 
-use LionNet\MozParanoid\Exceptions\NoRulesConfiguredException;
+use LionNet\MozParanoid\Config\Exceptions\NoRulesConfiguredException;
 use LionNet\MozPrefs\Discoverer\Config\Exceptions\NoConfigFileException;
 use Symfony\Component\Yaml\Yaml;
 

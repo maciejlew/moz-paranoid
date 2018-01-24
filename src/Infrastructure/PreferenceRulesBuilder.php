@@ -6,8 +6,8 @@ namespace LionNet\MozParanoid\Infrastructure;
 
 use LionNet\MozParanoid\Config\RulesConfig;
 use LionNet\MozParanoid\Domain\PreferenceRule;
-use LionNet\MozParanoid\Exceptions\InvalidRuleFormatException;
-use LionNet\MozParanoid\Exceptions\NoRulesConfiguredException;
+use LionNet\MozParanoid\Config\Exceptions\InvalidRuleFormatException;
+use LionNet\MozParanoid\Config\Exceptions\NoRulesConfiguredException;
 
 class PreferenceRulesBuilder
 {

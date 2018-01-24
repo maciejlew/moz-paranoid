@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LionNet\MozParanoid\Exceptions;
+namespace LionNet\MozParanoid\Config\Exceptions;
 
 use LionNet\MozPrefs\Discoverer\Config\Exceptions\ConfigurationException;
 

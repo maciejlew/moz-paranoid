@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace LionNet\MozParanoid\Tests\Unit;
 
-use LionNet\MozParanoid\Exceptions\InvalidRuleFormatException;
+use LionNet\MozParanoid\Config\Exceptions\InvalidRuleFormatException;
 use LionNet\MozParanoid\Infrastructure\PreferenceRulesBuilder;
 use LionNet\MozParanoid\Tests\Asserts\PreferenceRuleAssert;
 use LionNet\MozParanoid\Tests\Fixtures\ConfigFixture;
