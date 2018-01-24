@@ -12,9 +12,11 @@ use LionNet\MozPrefs\Parser\UserPreferencesParser;
 
 require_once './vendor/autoload.php';
 
+$configFilePath = 'resources/config.yml';
+
 try {
-    $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesConfig());
-    $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig('resources/config.yml'));
+    $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesConfig($configFilePath));
+    $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig($configFilePath));
     $preferenceRules = $preferenceRulesBuilder->build();
 } catch (ConfigurationException $exception) {
     die('Configuration step exception: ' . $exception->getMessage() . PHP_EOL);

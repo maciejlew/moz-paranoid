@@ -15,7 +15,7 @@ class RulesConfigMock extends RulesConfig
     /**
      * Intentional overwrite
      */
-    public function __construct() {}
+    public function __construct(string $configFilePath) {}
 
     /**
      * @return array

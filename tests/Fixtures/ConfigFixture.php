@@ -16,7 +16,7 @@ class ConfigFixture
      */
     public static function createRulesConfig(array $rules): RulesConfig
     {
-        $config = new RulesConfigMock();
+        $config = new RulesConfigMock('any');
         $config->rules = $rules;
         return $config;
     }

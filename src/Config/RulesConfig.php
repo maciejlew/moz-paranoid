@@ -16,13 +16,12 @@ class RulesConfig
     /**
      * @throws NoConfigFileException
      */
-    public function __construct()
+    public function __construct(string $configFilePath)
     {
-        $configFile = __DIR__ . '/../../resources/config.yml';
-        if (!is_readable($configFile)) {
+        if (!is_readable($configFilePath)) {
             throw NoConfigFileException::create();
         }
-        $this->config = Yaml::parse(file_get_contents($configFile));
+        $this->config = Yaml::parse(file_get_contents($configFilePath));
     }
 
     /**
