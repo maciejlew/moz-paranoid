@@ -16,5 +16,4 @@ class NoRulesConfiguredException extends ConfigurationException
     {
         return new self('Rules not set. See resources/config.yml.dist file.');
     }
-
 }

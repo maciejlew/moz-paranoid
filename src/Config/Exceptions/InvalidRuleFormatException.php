@@ -16,5 +16,4 @@ class InvalidRuleFormatException extends ConfigurationException
     {
         return new self('Invalid rule format. See resources/config.yml file.');
     }
-
 }

@@ -36,5 +36,4 @@ class PreferenceRulesAnalyzer
 
         return $result;
     }
-
 }

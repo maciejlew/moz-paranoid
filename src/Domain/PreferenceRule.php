@@ -27,5 +27,4 @@ class PreferenceRule
         $this->exceptedValue = $exceptedValue;
         $this->absenceToleration = $absenceToleration;
     }
-
 }

@@ -35,5 +35,4 @@ class RulesFromFileConfig implements RulesConfig
         }
         return $this->config['rules'];
     }
-
 }

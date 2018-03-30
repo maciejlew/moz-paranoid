@@ -34,7 +34,6 @@ class PreferenceRulesBuilder
         $rules = [];
 
         foreach ($this->rawRules as $ruleName => $rawRule) {
-
             $this->checkRuleFormat($rawRule);
 
             $rules[] = new PreferenceRule(
@@ -65,5 +64,4 @@ class PreferenceRulesBuilder
             throw InvalidRuleFormatException::create();
         }
     }
-
 }
