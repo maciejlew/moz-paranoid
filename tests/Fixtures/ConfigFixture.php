@@ -17,5 +17,4 @@ class ConfigFixture
     {
         return new RulesConfigStub($rules);
     }
-
 }

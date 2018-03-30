@@ -20,5 +20,4 @@ class RulesConfigStub implements RulesConfig
     {
         return $this->rules;
     }
-
 }

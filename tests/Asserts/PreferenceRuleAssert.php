@@ -16,5 +16,4 @@ class PreferenceRuleAssert extends Assert
         $this->assertEquals($expectedValue, $rule->exceptedValue);
         $this->assertEquals($expectedAbsenceToleration, $rule->absenceToleration);
     }
-
 }

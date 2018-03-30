@@ -118,5 +118,4 @@ class PreferenceRulesBuilderTest extends TestCase
             ],
         ];
     }
-
 }

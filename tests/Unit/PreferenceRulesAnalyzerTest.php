@@ -67,5 +67,4 @@ class PreferenceRulesAnalyzerTest extends TestCase
 
         $this->assertTrue($result);
     }
-
 }
