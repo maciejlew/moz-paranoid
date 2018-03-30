@@ -13,7 +13,7 @@ class PreferenceRulesAnalyzer
     private $preferences;
 
     /**
-     * @param array UserPreference[]
+     * @param UserPreference[] $preferences
      */
     public function __construct(array $preferences)
     {

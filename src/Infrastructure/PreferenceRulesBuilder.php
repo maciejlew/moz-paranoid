@@ -48,7 +48,7 @@ class PreferenceRulesBuilder
     }
 
     /**
-     * @param $rawRule
+     * @param mixed $rawRule
      * @throws InvalidRuleFormatException
      */
     private function checkRuleFormat($rawRule): void
