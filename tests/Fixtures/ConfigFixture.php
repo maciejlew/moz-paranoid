@@ -4,21 +4,18 @@ declare(strict_types=1);
 
 namespace LionNet\MozParanoid\Tests\Fixtures;
 
-use LionNet\MozParanoid\Config\RulesConfig;
-use LionNet\MozParanoid\Tests\Doubles\RulesConfigMock;
+use LionNet\MozParanoid\Tests\Doubles\RulesConfigStub;
 
 class ConfigFixture
 {
 
     /**
      * @param array $rules
-     * @return RulesConfig
+     * @return RulesConfigStub
      */
-    public static function createRulesConfig(array $rules): RulesConfig
+    public static function createRulesConfig(array $rules): RulesConfigStub
     {
-        $config = new RulesConfigMock('any');
-        $config->rules = $rules;
-        return $config;
+        return new RulesConfigStub($rules);
     }
 
 }

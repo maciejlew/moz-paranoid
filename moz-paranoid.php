@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use LionNet\MozParanoid\Config\RulesConfig;
+use LionNet\MozParanoid\Config\RulesFromFileConfig;
 use LionNet\MozParanoid\Domain\PreferenceRulesAnalyzer;
 use LionNet\MozParanoid\Infrastructure\PreferenceRulesBuilder;
 use LionNet\MozPrefs\Discoverer\Config\BasePathConfig;
@@ -15,7 +15,7 @@ require_once './vendor/autoload.php';
 $configFilePath = 'resources/config.yml';
 
 try {
-    $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesConfig($configFilePath));
+    $preferenceRulesBuilder = new PreferenceRulesBuilder(new RulesFromFileConfig($configFilePath));
     $userPreferencesDiscoverer = new UserPreferencesDiscoverer(new BasePathConfig($configFilePath));
     $preferenceRules = $preferenceRulesBuilder->build();
 } catch (ConfigurationException $exception) {
