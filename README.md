@@ -1,7 +1,5 @@
 # moz-paranoid
 
-[![Build Status](https://travis-ci.org/maciejlew/moz-paranoid.svg?branch=master)](https://travis-ci.org/maciejlew/moz-paranoid)
-
 MOZ for paranoids.
 
 This project goal is to look for enabled telemetry settings. At first it search for profile preference files in defined **basePath**. Then it compares those files content with defined **rules**.
